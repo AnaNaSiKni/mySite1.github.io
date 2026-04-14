@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Репетитор по математике - Брянск</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Милана Новикова</h1>
+            <p class="lead">Репетитор по Математике • 7 лет опыта • Брянск - Онлайн</p>
+        </div>
+    </header>
+
+    <section class="section about">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px; color: #1e3c72;">Обо мне</h2>
+            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 40px; align-items: center;">
+                <img src="./photo/teacher.jpg" alt="Фото репетитора" style="width: 100%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+                <div>
+                    <p><strong>Привет! Меня зовут Милана Новикова</strong> — репетитор по математике.</p>
+                    <ul style="margin: 20px 0; padding-left: 25px;">
+                        <li>Индивидуальные занятия для детей и взрослых</li>
+                        <li>Подготовка к ВПР, ОГЭ и ЕГЭ</li>
+                        <li>Поднятие успеваемости</li>
+                        <li>Групповые занятия (до 6 человек)</li>
+                    </ul>
+                    <p>Работаю в <strong>Онлайн формате</strong>. Помогу поднять успеваемость!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section price">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 20px; color: #1e3c72;">Прайс-лист</h2>
+            <div class="price-grid">
+                <div class="price-card">
+                    <h3>Индивидуально</h3>
+                    <div class="price-amt">1500 ₽/час</div>
+                    <p>1 на 1 — максимум внимания</p>
+                </div>
+                <div class="price-card">
+                    <h3>Полу-мини</h3>
+                    <div class="price-amt">1000 ₽/час</div>
+                    <p>2–3 человека</p>
+                </div>
+                <div class="price-card">
+                    <h3>Группа</h3>
+                    <div class="price-amt">700 ₽/час</div>
+                    <p>4–6 человек</p>
+                </div>
+                <div class="price-card">
+                    <h3>Абонемент 10 занятий</h3>
+                    <div class="price-amt">12 000 ₽</div>
+                    <p>20% скидка!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section book">
+        <div class="container">
+            <h2 style="margin-bottom: 30px;">Записаться на занятия</h2>
+            <form id="bookForm">
+                <input type="text" id="name" placeholder="Ваше имя *" required>
+                <input type="tel" id="phone" placeholder="Телефон *" required>
+                <select id="type" required>
+                    <option value="">Тип занятия</option>
+                    <option value="ind">Индивидуальное (1500₽)</option>
+                    <option value="mini">Полу-мини (1000₽)</option>
+                    <option value="group">Группа (700₽)</option>
+                </select>
+                <input type="date" id="date" required>
+                <input type="time" id="time" required>
+                <textarea id="comment" placeholder="Комментарий (цель, уровень, травмы)"></textarea>
+                <button type="submit">Записаться на пробное занятие</button>
+                <div id="success" class="success">Спасибо! Позвоню в течение часа для подтверждения.</div>
+            </form>
+        </div>
+    </section>
+
+    <footer style="background: #1e3c72; color: white; text-align: center; padding: 20px;">
+        <div class="container">
+            <p>&copy; 2026 Милана Новика | Репетитор по Математике Онлайн | <a href="tel:+79506962325" style="color: #20c997;">+7 (950) 969-23-25</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('bookForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('success').style.display = 'block';
+            document.getElementById('bookForm').reset();
+            // Здесь отправка на Telegram/email через Formspree/Netlify Forms
+            console.log('Форма отправлена!');
+        });
+    </script>
+</body>
+</html>
